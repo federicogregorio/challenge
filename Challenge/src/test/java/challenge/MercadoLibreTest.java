@@ -16,7 +16,15 @@ import org.openqa.selenium.WebElement;
 public class MercadoLibreTest {
 	
 	WebDriver driver ;
-	MercadoLibrePage ml = new MercadoLibrePage(driver);
+	
+	//String url = "https://www.mercadolibre.com.ar/";
+	
+	MarketPlacePage ml = new MarketPlacePage(driver, "mercadolibre", "https://www.mercadolibre.com.ar/");
+	
+	By inputSearch = By.className("nav-search-input");
+	
+	By searchButton = By.className("nav-search-btn");
+	
 	By results = By.className("ui-search-result__wrapper");
 	
  @BeforeClass
@@ -27,9 +35,9 @@ public class MercadoLibreTest {
  
   public void search10ItemMercadoLibre() {
 	  //search the product 
-	  ml.searchProduct();
+	  ml.searchProduct(inputSearch, searchButton);
 	  
-	  ml.screenShot("mercadolibre-capture" + ml.getI());
+	  ml.screenShot("mercadolibre-capture-" + ml.getI());
 	  ml.setI();
 	  //put in the list all result of this product
 	  List<WebElement> listResult = ml.findElements(results);
@@ -65,7 +73,6 @@ public class MercadoLibreTest {
 			  }else {
 				  break;
 			  }
-			  System.out.println((ml.getText(we) + "\n"));
 		  }
 	  }
   }

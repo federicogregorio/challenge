@@ -6,4 +6,9 @@
       <class name="challenge.MercadoLibreTest"/>
     </classes>
   </test> 
+  <test name="Ebay-Test">
+    <classes>
+      <class name="challenge.EbayTest"/>
+    </classes>
+  </test>
 </suite> 

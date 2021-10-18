@@ -85,6 +85,10 @@ public class MarketplaceBase {
 		return driver.getTitle();
 	}
 	
+	public void close(WebDriver driver) {
+		driver.quit();
+	}
+	
 	public void screenShot(String name) {
 	    File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 	    try {
@@ -115,7 +119,7 @@ public class MarketplaceBase {
 		
 		FileOutputStream fout=new FileOutputStream(file);
         
-		XSSFWorkbook wb=new XSSFWorkbook();
+		XSSFWorkbook wb =new XSSFWorkbook();
 		
 		
 		wb.createSheet("Sheet1");

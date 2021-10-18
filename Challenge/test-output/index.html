@@ -56,7 +56,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,6 +102,11 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
                     <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="challenge.EbayTest" class="method navigator-link" hash-for-method="search10ItemEbay">search10ItemEbay</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="challenge.MercadoLibreTest" class="method navigator-link" hash-for-method="search10ItemMercadoLibre">search10ItemMercadoLibre</a> <!-- method navigator-link -->
@@ -119,6 +124,21 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">challenge.EbayTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="search10ItemEbay">
+                  </a> <!-- search10ItemEbay -->
+                  <span class="method-name">search10ItemEbay</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -149,6 +169,11 @@
       &lt;class name=&quot;challenge.MercadoLibreTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Mercado-libre-Test --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Ebay-Test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;challenge.EbayTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Ebay-Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -161,6 +186,9 @@
             <ul>
               <li>
                 <span class="test-name">Mercado-libre-Test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Ebay-Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -186,16 +214,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'search10ItemMercadoLibre')
-data.setCell(0, 2, 'challenge.MercadoLibreTest')
-data.setCell(0, 3, 3158);
+data.setCell(0, 1, 'search10ItemEbay')
+data.setCell(0, 2, 'challenge.EbayTest')
+data.setCell(0, 3, 4211);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'search10ItemMercadoLibre')
+data.setCell(1, 2, 'challenge.MercadoLibreTest')
+data.setCell(1, 3, 3362);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -228,11 +260,26 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">search10ItemMercadoLibre</span>
-                <span class="method-start">15414 ms</span>
+                <span class="method-start">10726 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">18574 ms</span>
+                <span class="method-start">14090 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">challenge.EbayTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">14309 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">search10ItemEbay</span>
+                <span class="method-start">16930 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">21144 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
